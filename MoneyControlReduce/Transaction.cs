@@ -14,10 +14,10 @@ namespace MoneyControlReduce
             KindTransaction = kind;
             SaveName(name);
         }
-        public Transaction(string name, int kind, Boolean loadData) : base(name)
+        public Transaction(string name, int kind, Boolean saveData) : base(name)
         {
             KindTransaction = kind;
-            if (loadData)
+            if (saveData)
             {
                 SaveName(name);
             }

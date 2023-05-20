@@ -71,6 +71,14 @@ namespace MoneyControlReduce
             }
             transactions.Add(new Transaction(name, KindTransaction));
         }
+        public void AddNewTransaction(string name, bool saveData)
+        {
+            foreach (var transaction in transactions)
+            {
+                if (transaction.Name == name) throw new Exception("Transaction exist!!");
+            }
+            transactions.Add(new Transaction(name, KindTransaction, saveData));
+        }
         public void AddValueToTransaction(string value)
         {
             if (PositionSelected < 0 || PositionSelected >= transactions.Count)
@@ -78,6 +86,14 @@ namespace MoneyControlReduce
                 throw new Exception("Wrong value index!!!");
             }
             transactions[PositionSelected].AddTransactionValue(value);
+        }
+        public void AddValueToTransaction(string value, bool saveData)
+        {
+            if (PositionSelected < 0 || PositionSelected >= transactions.Count)
+            {
+                throw new Exception("Wrong value index!!!");
+            }
+            transactions[PositionSelected].AddTransactionValue(value, saveData);
         }
         public void SetPosition(int position)
         {

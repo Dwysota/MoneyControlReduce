@@ -39,14 +39,14 @@ namespace MoneyControlReduce.Tests
             // act
             if (containerIncome.CountItems == 0)
             {
-                containerIncome.AddNewTransaction("Wyplata");
+                containerIncome.AddNewTransaction("Wyplata", false);
                 containerIncome.SetPosition(0);
-                containerIncome.AddValueToTransaction("1000");
-                containerIncome.AddValueToTransaction("2000");
-                containerIncome.AddNewTransaction("Premia");
+                containerIncome.AddValueToTransaction("1000", false);
+                containerIncome.AddValueToTransaction("2000", false);
+                containerIncome.AddNewTransaction("Premia", false);
                 containerIncome.SetPosition(1);
-                containerIncome.AddValueToTransaction("500");
-                containerIncome.AddValueToTransaction("1000");
+                containerIncome.AddValueToTransaction("500", false);
+                containerIncome.AddValueToTransaction("1000", false);
 
             }
 
@@ -65,25 +65,25 @@ namespace MoneyControlReduce.Tests
             // act
             if (containerIncomes.CountItems == 0)
             {
-                containerIncomes.AddNewTransaction("Wyplata");
+                containerIncomes.AddNewTransaction("Wyplata", false);
                 containerIncomes.SetPosition(0);
-                containerIncomes.AddValueToTransaction("1000");
-                containerIncomes.AddValueToTransaction("2000");
-                containerIncomes.AddNewTransaction("Premia");
+                containerIncomes.AddValueToTransaction("1000", false);
+                containerIncomes.AddValueToTransaction("2000", false);
+                containerIncomes.AddNewTransaction("Premia", false);
                 containerIncomes.SetPosition(1);
-                containerIncomes.AddValueToTransaction("500");
-                containerIncomes.AddValueToTransaction("1000");
+                containerIncomes.AddValueToTransaction("500", false);
+                containerIncomes.AddValueToTransaction("1000", false);
             }
             if (containerOutlays.CountItems == 0)
             {
-                containerOutlays.AddNewTransaction("Czynsz");
+                containerOutlays.AddNewTransaction("Czynsz", false);
                 containerOutlays.SetPosition(0);
-                containerOutlays.AddValueToTransaction("1000");
-                containerOutlays.AddValueToTransaction("2000");
-                containerOutlays.AddNewTransaction("Energia");
+                containerOutlays.AddValueToTransaction("1000", false);
+                containerOutlays.AddValueToTransaction("2000", false);
+                containerOutlays.AddNewTransaction("Energia", false);
                 containerOutlays.SetPosition(1);
-                containerOutlays.AddValueToTransaction("500");
-                containerOutlays.AddValueToTransaction("1000");
+                containerOutlays.AddValueToTransaction("500", false);
+                containerOutlays.AddValueToTransaction("1000", false);
             }
             Statistics statistics;
             statistics = containerIncomes.GetStatistics() + containerOutlays.GetStatistics();
