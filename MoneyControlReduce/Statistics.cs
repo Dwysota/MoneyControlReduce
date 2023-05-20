@@ -12,7 +12,12 @@
                 {
                     return 0;
                 }
-                return values.Sum();
+                double sum = 0;
+                for(int i = 0; i < values.Length; i++)
+                {
+                    sum += values[i];
+                }
+                return sum;
             }
 
         }
